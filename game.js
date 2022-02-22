@@ -1,13 +1,13 @@
 document.getElementById('btn').addEventListener('click', function(){
     const input = document.getElementById('input');
      const inputNumber = parseInt(input.value);
-     if(input.value == '' || input.value == NaN || input.value > 10){
+     if(input.value == '' || input.value == NaN || input.value > 9){
        alert('Input A Number then Cheek')
    } else{
     const getInput = document.getElementById('inputed');
     getInput.innerText = inputNumber;
     const random = document.getElementById('random');
-    random.innerText = Math.round(Math.random()* 10);
+    random.innerText = Math.floor(Math.random()* 10);
    }
    input.value = '';
    if(inputNumber == parseInt(random.innerText)){
